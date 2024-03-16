@@ -68,7 +68,7 @@ const Scholars = () => {
     }
   ]
   return (
-    <div className='my-20'>
+    <div className='mt-20'>
       <div className='py-10'>
         <TypewriterEffect words={words}/>
       </div>
