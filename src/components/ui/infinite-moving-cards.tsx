@@ -1,7 +1,7 @@
 "use client";
 
-import { cn } from "@/utils/cn";
-import React, { useEffect, useState } from "react";
+import { cn } from "@/utils/cn"
+import React, { useCallback, useEffect, useRef, useState } from "react";
 
 export const InfiniteMovingCards = ({
   items,
@@ -20,55 +20,44 @@ export const InfiniteMovingCards = ({
   pauseOnHover?: boolean;
   className?: string;
 }) => {
-  const containerRef = React.useRef<HTMLDivElement>(null);
-  const scrollerRef = React.useRef<HTMLUListElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const scrollerRef = useRef<HTMLUListElement>(null);
+  const [start, setStart] = useState(false);
+
+  const addAnimation = useCallback(() => {
+    if (containerRef.current && scrollerRef.current) {
+      // Duplicate list items to create continuous scrolling effect
+      const scrollerContent = Array.from(scrollerRef.current.children);
+      scrollerContent.forEach((item) => {
+        const duplicatedItem = item.cloneNode(true);
+        scrollerRef.current!.appendChild(duplicatedItem); // Using optional chaining to avoid potential null errors
+      });
+
+      // Set animation direction based on props
+      const animationDirection = direction === "left" ? "forwards" : "reverse";
+      containerRef.current.style.setProperty("--animation-direction", animationDirection);
+
+      // Set animation speed based on props
+      let animationDuration;
+      switch (speed) {
+        case "fast":
+          animationDuration = "20s";
+          break;
+        case "normal":
+          animationDuration = "40s";
+          break;
+        default:
+          animationDuration = "80s";
+      }
+      containerRef.current.style.setProperty("--animation-duration", animationDuration);
+
+      setStart(true); // Trigger animation start
+    }
+  }, [direction, speed]); // Include dependencies for useCallback
 
   useEffect(() => {
     addAnimation();
-  }, [addAnimation]);
-  const [start, setStart] = useState(false);
-  function addAnimation() {
-    if (containerRef.current && scrollerRef.current) {
-      const scrollerContent = Array.from(scrollerRef.current.children);
-
-      scrollerContent.forEach((item) => {
-        const duplicatedItem = item.cloneNode(true);
-        if (scrollerRef.current) {
-          scrollerRef.current.appendChild(duplicatedItem);
-        }
-      });
-
-      getDirection();
-      getSpeed();
-      setStart(true);
-    }
-  }
-  const getDirection = () => {
-    if (containerRef.current) {
-      if (direction === "left") {
-        containerRef.current.style.setProperty(
-          "--animation-direction",
-          "forwards"
-        );
-      } else {
-        containerRef.current.style.setProperty(
-          "--animation-direction",
-          "reverse"
-        );
-      }
-    }
-  };
-  const getSpeed = () => {
-    if (containerRef.current) {
-      if (speed === "fast") {
-        containerRef.current.style.setProperty("--animation-duration", "20s");
-      } else if (speed === "normal") {
-        containerRef.current.style.setProperty("--animation-duration", "40s");
-      } else {
-        containerRef.current.style.setProperty("--animation-duration", "80s");
-      }
-    }
-  };
+  }, [addAnimation]); // Add the callback as a dependency
   return (
     <div
       ref={containerRef}

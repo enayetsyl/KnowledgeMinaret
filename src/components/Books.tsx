@@ -88,7 +88,9 @@ const Books = () => {
 
   return (
     <div className='mt-10'>
+      <div >
       <TypewriterEffect words={words}/>
+      </div>
       <div className=' h-[40rem] flex items-center justify-center w-full'>
 <CardStack items={CARDS} />
       </div>
