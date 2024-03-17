@@ -47,23 +47,23 @@ const Scholars = () => {
       link: '/scholars' 
     },
     {
-      title: 'Dr. Abdullah Jahangir',
-      description: 'Graduate from Soudi Arab. Three time gold medalist. Ex professor of Islamic University.',
+      title: 'Enamul Haque',
+      description: 'A marin engineer by profession. Now spending full time in the preaching of islam throughout the whole bangladesh.',
       link: '/scholars'
     },
     {
-      title: 'Dr. Muhammad Saifullah',
-      description: 'Graduate from Madina Islamic University. Phd holder. Mutalli of Masjid As Siddik and chairman of Masjid At Takwa.',
+      title: 'Dr. Manzoor e Elahi',
+      description: 'Graduate from Madina Islamic University. Phd holder. Professor at the National University, Gazipur, Bangladesh..',
       link: '/scholars' 
     },
     {
-      title: 'Dr. Abdullah Jahangir',
-      description: 'Graduate from Soudi Arab. Three time gold medalist. Ex professor of Islamic University.',
+      title: 'Naseel Shahrukh',
+      description: 'Graduate from BUET. Hafiz and double dawra from madrasha board. Teacher of hifz at School for Community Development.',
       link: '/scholars'
     },
     {
-      title: 'Dr. Muhammad Saifullah',
-      description: 'Graduate from Madina Islamic University. Phd holder. Mutalli of Masjid As Siddik and chairman of Masjid At Takwa.',
+      title: 'Sayed Madani',
+      description: 'Graduate from Madina Islamic University. Imam and Khatib of Qudrat Ullah Mosque, BandarBazar, Sylhet.',
       link: '/scholars' 
     }
   ]

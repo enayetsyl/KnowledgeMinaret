@@ -12,8 +12,12 @@ const Navbar = () => {
       link: '/scholars',
     },
     {
-      name: 'Product',
-      link: '/product',
+      name: 'Blog',
+      link: '/blog',
+    },
+    {
+      name: 'Mystery',
+      link: '/mystery',
     },
   ]
   return (

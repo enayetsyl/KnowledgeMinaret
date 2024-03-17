@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { ImagesSlider } from "@/components/ui/images-slider";
+import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 
 const HeroSection = () => {
   const images = [
@@ -13,13 +14,26 @@ const HeroSection = () => {
     "https://sites.lsa.umich.edu/khamseen/wp-content/uploads/sites/1139/2021/07/cgruber-masjid-thumbnail-image_900x600px.jpg"
    
   ];
+  const words = [
+    {text: 'G'},
+    {text: 'a'},
+    {text: 'l'},
+    {text: 'l'},
+    {text: 'e'},
+    {text: 'r'},
+    {text: 'y'},
+  ]
   return (
-    <div>
-       <ImagesSlider className="h-[40rem]" images={images}
+    <div className="mt-40 mb-20">
+      <div className="pb-20">
+        <TypewriterEffect words={words}/>
+      </div>
+       <div className="max-w-7xl mx-auto rounded-xl">
+       <ImagesSlider className="h-[40rem] rounded-xl" images={images}
        
        >
         <div className="bg-zinc-200 z-10 rounded-xl p-3">
-        <p className=" text-transparent bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text font-bold text-5xl text-center">Browse Carefully <br /> Mistry ahead.</p>
+        <p className=" text-transparent bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text font-bold text-5xl text-center">Mosque Gallery.</p>
         </div>
   
       {/* <motion.div
@@ -45,6 +59,7 @@ const HeroSection = () => {
         </button>
       </motion.div> */}
     </ImagesSlider>
+       </div>
     </div>
   )
 }
