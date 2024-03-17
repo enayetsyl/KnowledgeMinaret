@@ -1,53 +1,89 @@
 import React from 'react'
 import { AnimatedTooltip } from './ui/animated-tooltip';
+import { TextGenerateEffect } from './ui/text-generate-effect';
+import { TypewriterEffect } from './ui/typewriter-effect';
 
 const Footer = () => {
   const people = [
     {
       id: 1,
-      name: "John Doe",
+      name: "Abu Bokor",
       designation: "Software Engineer",
       image:
-        "https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80",
+        "https://passtheknowledge.files.wordpress.com/2014/10/loon.jpeg",
     },
     {
       id: 2,
-      name: "Robert Johnson",
+      name: "Omor Faruk",
       designation: "Product Manager",
       image:
-        "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzBcU7udFrPsmjeh9xosGQETQKW4SIqBdhFujCSqX9jmx-zkCRlxGgYCJmumnq2Y16sl0&usqp=CAU",
     },
     {
       id: 3,
-      name: "Jane Smith",
+      name: "Usman Gani",
       designation: "Data Scientist",
       image:
-        "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+        "https://cdn.openart.ai/uploads/image_iVqVF46D_1692376501807_512.webp",
     },
     {
       id: 4,
-      name: "Emily Davis",
+      name: "Ali Bin Talib",
       designation: "UX Designer",
       image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Photography-wallpaper-facial-hair-man-beard-chin-moustache-human-elder-portrait-1453095.jpg/800px-Photography-wallpaper-facial-hair-man-beard-chin-moustache-human-elder-portrait-1453095.jpg",
     },
     {
       id: 5,
-      name: "Tyler Durden",
-      designation: "Soap Developer",
+      name: "Hamza Asadullah",
+      designation: "Frontend Developer",
       image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80",
+        "https://storage.googleapis.com/pai-images/ab9ca8df1fa64f5cad86cd32d85a8e69.jpeg",
     },
     {
       id: 6,
-      name: "Dora",
-      designation: "The Explorer",
+      name: "Zayed Bin Haris",
+      designation: "Backend Deleloper",
       image:
-        "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3534&q=80",
+        "https://storage.googleapis.com/pai-images/d7e6098f9ea742c5860e19ade6b9f5e6.jpeg",
     },
   ];
+  const words = [
+    {
+      text: "O",
+      className: "text-white  dark:text-blue-500",
+    },
+    {
+      text: "u",
+    },
+    {
+      text: "r",
+    },
+    {
+      text: " ",
+    },
+    {
+      text: "T",
+    },
+    {
+      text: "e",
+    },
+    {
+      text: "a",
+    },
+    {
+      text: "m",
+    },
+    
+  ]
   return (
     <div className='pb-10'>
+      <div className='pb-10'>
+    <TypewriterEffect words={words}/>
+      </div>
+      <div>
+        <h1 className='text-center pb-10'>Hover over image to know details.</h1>
+      </div>
       <div className="flex flex-row items-center justify-center w-full">
       <AnimatedTooltip items={people} />
     </div>

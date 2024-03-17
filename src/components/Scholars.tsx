@@ -39,32 +39,32 @@ const Scholars = () => {
     {
       title: 'Dr. Abdullah Jahangir',
       description: 'Graduate from Soudi Arab. Three time gold medalist. Ex professor of Islamic University.',
-      link: '/scholor/ajhangir'
+      link: '/scholars'
     },
     {
       title: 'Dr. Muhammad Saifullah',
       description: 'Graduate from Madina Islamic University. Phd holder. Mutalli of Masjid As Siddik and chairman of Masjid At Takwa.',
-      link: '/scholor/saifullah' 
+      link: '/scholars' 
     },
     {
       title: 'Dr. Abdullah Jahangir',
       description: 'Graduate from Soudi Arab. Three time gold medalist. Ex professor of Islamic University.',
-      link: '/scholor/ajhangir'
+      link: '/scholars'
     },
     {
       title: 'Dr. Muhammad Saifullah',
       description: 'Graduate from Madina Islamic University. Phd holder. Mutalli of Masjid As Siddik and chairman of Masjid At Takwa.',
-      link: '/scholor/saifullah' 
+      link: '/scholars' 
     },
     {
       title: 'Dr. Abdullah Jahangir',
       description: 'Graduate from Soudi Arab. Three time gold medalist. Ex professor of Islamic University.',
-      link: '/scholor/ajhangir'
+      link: '/scholars'
     },
     {
       title: 'Dr. Muhammad Saifullah',
       description: 'Graduate from Madina Islamic University. Phd holder. Mutalli of Masjid As Siddik and chairman of Masjid At Takwa.',
-      link: '/scholor/saifullah' 
+      link: '/scholars' 
     }
   ]
   return (

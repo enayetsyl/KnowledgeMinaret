@@ -12,8 +12,8 @@ const Navbar = ({ className }: { className?: string }) => {
       link: '/',
     },
     {
-      name: 'About',
-      link: '/about',
+      name: 'Scholars',
+      link: '/scholars',
     },
     {
       name: 'Product',
@@ -31,8 +31,8 @@ const Navbar = ({ className }: { className?: string }) => {
       <MenuItem setActive={setActive} active={active} item="Home">
         </MenuItem>
       </Link>
-      <Link href='/about'>
-      <MenuItem setActive={setActive} active={active} item="About">
+      <Link href='/scholars'>
+      <MenuItem setActive={setActive} active={active} item="Scholars">
         </MenuItem>
       </Link>
       <Link href='/product'>
