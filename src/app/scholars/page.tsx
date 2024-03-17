@@ -16,7 +16,7 @@ const Scholars = () => {
     <BackgroundBeams/>
     <ScholarShowcase/>
     
-    <EndMessage/>
+    <EndMessage href='/blog'/>
     {/* <NewsLetter/> */}
     </div>
   )

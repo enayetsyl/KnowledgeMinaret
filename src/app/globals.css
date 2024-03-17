@@ -1,6 +1,6 @@
 @tailwind base;
 @tailwind components;
-body.dark{
+/* body.dark{
   @apply bg-gray-900 text-white
-}
+} */
 @tailwind utilities;

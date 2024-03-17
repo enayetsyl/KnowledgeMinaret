@@ -1,14 +1,24 @@
 import React from 'react'
+import HeroSection from './HeroSection'
+import Spotlight from './SpotlightSec'
+import GoodDeed from './GoodDeed'
+import GoodDeedList from './GoodDeedList'
+import Parents from './Parents'
+import HiddenSadaqah from './HiddenSadaqah'
+import OneUmmah from './OneUmmah'
 
 const MistryPage = () => {
   return (
     <div className="bg-slate-950 text-white ">
-      <h1>image slider</h1>
-      <h1>spotlight</h1>
-      <h1>svg musk effect</h1>
-      <h1>text reveal card</h1>
-      <h1>Ever valut card</h1>
-      <h1>github globe</h1>
+      <Spotlight/>
+      <GoodDeed/>
+      {/* <HeroSection/> */}
+      <GoodDeedList/>
+      <Parents/>
+      <HiddenSadaqah/>
+      {/* <OneUmmah/> */}
+
+        
     </div>
   )
 }

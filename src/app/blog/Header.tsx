@@ -47,7 +47,7 @@ const Header = () => {
       </button>
         </ButtonsCard>
       </div>
-      <BackgroundBeams />
+      <BackgroundBeams className="bg-slate-950 h-[105vh] " />
     </div>
   )
 }
