@@ -18,6 +18,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
+import Link from "next/link";
 
 export function FirstSection() {
   const words = [
@@ -64,6 +65,7 @@ export function FirstSection() {
           header={item.header}
           className={cn("[&>p:text-lg]", item.className)}
           icon={item.icon}
+          link={item.link}
         />
       ))}
     </BentoGrid>
@@ -107,7 +109,7 @@ const SkeletonOne = () => {
       whileHover="animate"
       className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2"
     >
-      <motion.div
+     <motion.div
         variants={variants}
         className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2  items-center space-x-2 bg-white/60 dark:bg-black"
       >
@@ -128,7 +130,7 @@ const SkeletonOne = () => {
         <div className="h-6 w-6 rounded-full bg-gradient-to-r from-slate-500 to-blue-800 flex-shrink-0" />
         <div className="w-full bg-gradient-to-r from-slate-500 to-blue-800 h-4 rounded-full dark:bg-neutral-900" />
       </motion.div>
-    </motion.div>
+       </motion.div>
   );
 };
 const SkeletonTwo = () => {
@@ -258,7 +260,7 @@ const SkeletonFour = () => {
           width="100"
           className="rounded-full h-10 w-10"
         />
-        <p className="sm:text-sm text-xs text-center font-semibold text-white/80 mt-4">
+        <p className="sm:text-sm text-xs text-center font-semibold text-white/70 mt-4">
         Ibn Al-Haitham (965-1040)
         </p>
         <p className="border border-white/90 bg-gray-600 dark:bg-green-900/20 text-white/90 text-xs rounded-full px-2 py-0.5 mt-4">
@@ -354,6 +356,7 @@ const items = [
     header: <SkeletonOne />,
     className: "md:col-span-1",
     icon: <IconGeometry className="h-4 w-4 text-white/90" />,
+    link:"https://en.wikipedia.org/wiki/Nasir_al-Din_al-Tusi"
   },
   {
     title: "Book of Algebra ",
@@ -365,6 +368,7 @@ const items = [
     header: <SkeletonTwo />,
     className: "md:col-span-1",
     icon: <IconSquareRoot2 className="h-4 w-4 text-white/90" />,
+    link: 'https://en.wikipedia.org/wiki/Al-Khwarizmi'
   },
   {
     title: "The Canon of Medicine",
@@ -376,6 +380,7 @@ const items = [
     header: <SkeletonThree />,
     className: "md:col-span-1",
     icon: <IconVaccine className="h-4 w-4 text-white/90" />,
+    link: 'https://en.wikipedia.org/wiki/Avicenna'
   },
   {
     title: "Powerful Golden Age Muslim Invention",
@@ -387,6 +392,7 @@ const items = [
     header: <SkeletonFour />,
     className: "md:col-span-2",
     icon: <IconGridGoldenratio className="h-4 w-4 text-white/90" />,
+    link: 'https://themuslimvibe.com/western-muslim-culture/top-10-muslim-inventions-in-history'
   },
 
   {
@@ -399,5 +405,6 @@ const items = [
     header: <SkeletonFive />,
     className: "md:col-span-1",
     icon: <IconWindmill className="h-4 w-4 text-white/90" />,
+    link: 'https://ms.wikipedia.org/wiki/Abu_Lu%27lu%27ah'
   },
 ];

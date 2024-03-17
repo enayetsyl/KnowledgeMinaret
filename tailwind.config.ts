@@ -10,19 +10,24 @@ module.exports = {
   darkMode: "class",
   theme: {
     // rest of the code
-    "animation": {
-      shimmer: "shimmer 2s linear infinite"
-    },
-    "keyframes": {
-      shimmer: {
-        from: {
-          "backgroundPosition": "0 0"
-        },
-        to: {
-          "backgroundPosition": "-200% 0"
+    extend: {
+      animation: {
+        shimmer: "shimmer 2s linear infinite"
+      },
+      keyframes: {
+        shimmer: {
+          from: {
+            backgroundPosition: "0 0"
+          },
+          to: {
+            backgroundPosition: "-200% 0"
+          }
         }
-      }
-    }
+      },
+      boxShadow: {
+        custom: '2px 5px 10px rgba(255, 255, 255, 0.9)', // Adjust the color and intensity as needed
+      },
+    },
   },
   plugins: [
     // rest of the code
