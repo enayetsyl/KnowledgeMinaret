@@ -1,30 +1,13 @@
-import { FloatingNav } from '@/components/ui/floating-navbar'
-import React from 'react'
+import { FloatingNav } from "@/components/ui/floating-navbar";
+import { navItems } from "@/constant";
+import React from "react";
 
 const Navbar = () => {
-  const navItems = [
-    {
-      name: 'Home',
-      link: '/',
-    },
-    {
-      name: 'Scholars',
-      link: '/scholars',
-    },
-    {
-      name: 'Blog',
-      link: '/blog',
-    },
-    {
-      name: 'Mystery',
-      link: '/mystery',
-    },
-  ]
   return (
     <div className="relative  w-full">
       <FloatingNav navItems={navItems} />
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

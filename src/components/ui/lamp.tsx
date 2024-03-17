@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/utils/cn";
+import { LampContainerProps } from "@/type/type";
 
 export function LampDemo() {
   return (
@@ -22,13 +23,7 @@ export function LampDemo() {
   );
 }
 
-export const LampContainer = ({
-  children,
-  className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => {
+export const LampContainer = ({ children, className }: LampContainerProps) => {
   return (
     <div
       className={cn(

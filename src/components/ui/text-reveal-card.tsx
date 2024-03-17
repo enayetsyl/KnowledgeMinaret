@@ -3,22 +3,26 @@ import React, { useEffect, useRef, useState, memo } from "react";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { cn } from "@/utils/cn";
+import {
+  TextRevealCardDescriptionProps,
+  TextRevealCardProps,
+  TextRevealCardTitleProps,
+} from "@/type/type";
 
 export const TextRevealCard = ({
   text,
   revealText,
   children,
   className,
-}: {
-  text: string;
-  revealText: string;
-  children?: React.ReactNode;
-  className?: string;
-}) => {
+}: TextRevealCardProps) => {
   const [widthPercentage, setWidthPercentage] = useState(0);
+
   const cardRef = useRef<HTMLDivElement | any>(null);
+
   const [left, setLeft] = useState(0);
+
   const [localWidth, setLocalWidth] = useState(0);
+
   const [isMouseOver, setIsMouseOver] = useState(false);
 
   useEffect(() => {
@@ -44,6 +48,7 @@ export const TextRevealCard = ({
     setIsMouseOver(false);
     setWidthPercentage(0);
   }
+
   function mouseEnterHandler() {
     setIsMouseOver(true);
   }
@@ -113,10 +118,7 @@ export const TextRevealCard = ({
 export const TextRevealCardTitle = ({
   children,
   className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => {
+}: TextRevealCardTitleProps) => {
   return (
     <h2 className={twMerge("text-white text-lg mb-2", className)}>
       {children}
@@ -127,10 +129,7 @@ export const TextRevealCardTitle = ({
 export const TextRevealCardDescription = ({
   children,
   className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => {
+}: TextRevealCardDescriptionProps) => {
   return (
     <p className={twMerge("text-[#a9a9a9] text-sm", className)}>{children}</p>
   );
@@ -141,7 +140,6 @@ const Stars = () => {
   const randomOpacity = () => Math.random();
   const random = () => Math.random();
 
-  
   return (
     <div className="absolute inset-0">
       {[...Array(140)].map((_, i) => (

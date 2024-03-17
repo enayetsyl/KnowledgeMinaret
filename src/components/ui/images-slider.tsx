@@ -1,4 +1,6 @@
 "use client";
+import { ImageSliderSlideVariants } from "@/constant";
+import { ImagesSliderProps } from "@/type/type";
 import { cn } from "@/utils/cn";
 import { motion, AnimatePresence } from "framer-motion";
 import React, { useEffect, useState } from "react";
@@ -11,15 +13,7 @@ export const ImagesSlider = ({
   className,
   autoplay = true,
   direction = "up",
-}: {
-  images: string[];
-  children: React.ReactNode;
-  overlay?: React.ReactNode;
-  overlayClassName?: string;
-  className?: string;
-  autoplay?: boolean;
-  direction?: "up" | "down";
-}) => {
+}: ImagesSliderProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(false);
   const [loadedImages, setLoadedImages] = useState<string[]>([]);
@@ -83,37 +77,6 @@ export const ImagesSlider = ({
     };
   }, []);
 
-  const slideVariants = {
-    initial: {
-      scale: 0,
-      opacity: 0,
-      rotateX: 45,
-    },
-    visible: {
-      scale: 1,
-      rotateX: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-        ease: [0.645, 0.045, 0.355, 1.0],
-      },
-    },
-    upExit: {
-      opacity: 1,
-      y: "-150%",
-      transition: {
-        duration: 1,
-      },
-    },
-    downExit: {
-      opacity: 1,
-      y: "150%",
-      transition: {
-        duration: 1,
-      },
-    },
-  };
-
   const areImagesLoaded = loadedImages.length > 0;
 
   return (
@@ -141,7 +104,7 @@ export const ImagesSlider = ({
             initial="initial"
             animate="visible"
             exit={direction === "up" ? "upExit" : "downExit"}
-            variants={slideVariants}
+            variants={ImageSliderSlideVariants}
             className="image h-full w-full absolute inset-0 object-cover"
           />
         </AnimatePresence>

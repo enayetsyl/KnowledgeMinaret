@@ -3,14 +3,9 @@ import { useMotionValue } from "framer-motion";
 import React, { useState, useEffect } from "react";
 import { useMotionTemplate, motion } from "framer-motion";
 import { cn } from "@/utils/cn";
+import { EvervaultCardProps } from "@/type/type";
 
-export const EvervaultCard = ({
-  text,
-  className,
-}: {
-  text?: string;
-  className?: string;
-}) => {
+export const EvervaultCard = ({ text, className }: EvervaultCardProps) => {
   let mouseX = useMotionValue(0);
   let mouseY = useMotionValue(0);
 
@@ -80,8 +75,7 @@ export function CardPattern({ mouseX, mouseY, randomString }: any) {
   );
 }
 
-const characters =
-  "CHARITY";
+const characters = "CHARITY";
 export const generateRandomString = (length: number) => {
   let result = "";
   for (let i = 0; i < length; i++) {

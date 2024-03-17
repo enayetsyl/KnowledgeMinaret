@@ -8,14 +8,12 @@ import {
   useSpring,
 } from "framer-motion";
 import { cn } from "@/utils/cn";
+import { TracingBeamProps } from "@/type/type";
 
 export const TracingBeam = ({
   children,
   className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => {
+}: TracingBeamProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,

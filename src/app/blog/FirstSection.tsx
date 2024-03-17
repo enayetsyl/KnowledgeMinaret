@@ -3,14 +3,9 @@ import { cn } from "@/utils/cn";
 import React from "react";
 
 import {
-  IconBoxAlignRightFilled,
-  IconClipboardCopy,
-  IconFileBroken,
   IconGeometry,
   IconGridGoldenratio,
-  IconSignature,
   IconSquareRoot2,
-  IconTableColumn,
   IconVaccine,
   IconWindmill,
 } from "@tabler/icons-react";
@@ -18,59 +13,30 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
-import Link from "next/link";
+import { blogPageFirstSectionWords } from "@/constant";
 
 export function FirstSection() {
-  const words = [
-    {
-      text: 'B'
-    },
-    {
-      text: 'o'
-    },
-    {
-      text: 'o'
-    },
-    {
-      text: 'k'
-    },
-    {
-      text: ' '
-    },
-    {
-      text: 'B'
-    },
-    {
-      text: 'l'
-    },
-    {
-      text: 'o'
-    },
-    {
-      text: 'g'
-    },
-  ]
   return (
-   <div>
-    <div className="py-20">
-      <TypewriterEffect words={words}/>
-    </div>
     <div>
-    <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
-      {items.map((item, i) => (
-        <BentoGridItem
-          key={i}
-          title={item.title}
-          description={item.description}
-          header={item.header}
-          className={cn("[&>p:text-lg]", item.className)}
-          icon={item.icon}
-          link={item.link}
-        />
-      ))}
-    </BentoGrid>
+      <div className="py-20">
+        <TypewriterEffect words={blogPageFirstSectionWords} />
+      </div>
+      <div>
+        <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
+          {items.map((item, i) => (
+            <BentoGridItem
+              key={i}
+              title={item.title}
+              description={item.description}
+              header={item.header}
+              className={cn("[&>p:text-lg]", item.className)}
+              icon={item.icon}
+              link={item.link}
+            />
+          ))}
+        </BentoGrid>
+      </div>
     </div>
-   </div>
   );
 }
 const Skeleton = () => (
@@ -109,7 +75,7 @@ const SkeletonOne = () => {
       whileHover="animate"
       className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2"
     >
-     <motion.div
+      <motion.div
         variants={variants}
         className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2  items-center space-x-2 bg-white/60 dark:bg-black"
       >
@@ -130,7 +96,7 @@ const SkeletonOne = () => {
         <div className="h-6 w-6 rounded-full bg-gradient-to-r from-slate-500 to-blue-800 flex-shrink-0" />
         <div className="w-full bg-gradient-to-r from-slate-500 to-blue-800 h-4 rounded-full dark:bg-neutral-900" />
       </motion.div>
-       </motion.div>
+    </motion.div>
   );
 };
 const SkeletonTwo = () => {
@@ -246,10 +212,10 @@ const SkeletonFour = () => {
           className="rounded-full h-10 w-10"
         />
         <p className="sm:text-sm text-xs text-center font-semibold text-white/70 mt-4">
-        Jabir ibn Hayyan (721-813)
+          Jabir ibn Hayyan (721-813)
         </p>
         <p className="border border-white/90 bg-gray-600 dark:bg-red-900/20 text-white/90 text-xs rounded-full px-2 py-0.5 mt-4">
-        Chemistry
+          Chemistry
         </p>
       </motion.div>
       <motion.div className="h-full relative z-20 w-1/3 rounded-2xl bg-slate-900 p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center">
@@ -261,10 +227,10 @@ const SkeletonFour = () => {
           className="rounded-full h-10 w-10"
         />
         <p className="sm:text-sm text-xs text-center font-semibold text-white/70 mt-4">
-        Ibn Al-Haitham (965-1040)
+          Ibn Al-Haitham (965-1040)
         </p>
         <p className="border border-white/90 bg-gray-600 dark:bg-green-900/20 text-white/90 text-xs rounded-full px-2 py-0.5 mt-4">
-        Camera
+          Camera
         </p>
       </motion.div>
       <motion.div
@@ -279,10 +245,10 @@ const SkeletonFour = () => {
           className="rounded-full h-10 w-10"
         />
         <p className="sm:text-sm text-xs text-center font-semibold text-white/70 mt-4">
-        Al Zahrawi (936-1013).
+          Al Zahrawi (936-1013).
         </p>
         <p className="border border-white/90 bg-gray-600 dark:bg-orange-900/20 text-white/90 text-xs rounded-full px-2 py-0.5 mt-4">
-        Surgery
+          Surgery
         </p>
       </motion.div>
     </motion.div>
@@ -332,7 +298,9 @@ const SkeletonFive = () => {
           className="rounded-full h-10 w-10"
         />
         <p className="text-xs text-white/70">
-        In the summer months, Arab deserts would dry up so Pīrūz Nahāvandi built the first windmill, which tapped on the only source of energy the desert could.
+          In the summer months, Arab deserts would dry up so Pīrūz Nahāvandi
+          built the first windmill, which tapped on the only source of energy
+          the desert could.
         </p>
       </motion.div>
       <motion.div
@@ -350,37 +318,40 @@ const items = [
     title: "Kitāb al-Shakl al-qattā",
     description: (
       <span className="text-sm text-white/70">
-        Book on the complete quadrilateral. A five-volume summary of trigonometry.
+        Book on the complete quadrilateral. A five-volume summary of
+        trigonometry.
       </span>
     ),
     header: <SkeletonOne />,
     className: "md:col-span-1",
     icon: <IconGeometry className="h-4 w-4 text-white/90" />,
-    link:"https://en.wikipedia.org/wiki/Nasir_al-Din_al-Tusi"
+    link: "https://en.wikipedia.org/wiki/Nasir_al-Din_al-Tusi",
   },
   {
     title: "Book of Algebra ",
     description: (
       <span className="text-sm text-white/70">
-        Al-Khwarizmi's algebra is the foundation and cornerstone of the sciences. 
+        Al-Khwarizmi's algebra is the foundation and cornerstone of the
+        sciences.
       </span>
     ),
     header: <SkeletonTwo />,
     className: "md:col-span-1",
     icon: <IconSquareRoot2 className="h-4 w-4 text-white/90" />,
-    link: 'https://en.wikipedia.org/wiki/Al-Khwarizmi'
+    link: "https://en.wikipedia.org/wiki/Al-Khwarizmi",
   },
   {
     title: "The Canon of Medicine",
     description: (
       <span className="text-sm text-white/70">
-        Ibne Sina authored a five-volume medical encyclopedia.In arabic it is called al-Qānūn fī l-ṭibb.
+        Ibne Sina authored a five-volume medical encyclopedia.In arabic it is
+        called al-Qānūn fī l-ṭibb.
       </span>
     ),
     header: <SkeletonThree />,
     className: "md:col-span-1",
     icon: <IconVaccine className="h-4 w-4 text-white/90" />,
-    link: 'https://en.wikipedia.org/wiki/Avicenna'
+    link: "https://en.wikipedia.org/wiki/Avicenna",
   },
   {
     title: "Powerful Golden Age Muslim Invention",
@@ -392,19 +363,17 @@ const items = [
     header: <SkeletonFour />,
     className: "md:col-span-2",
     icon: <IconGridGoldenratio className="h-4 w-4 text-white/90" />,
-    link: 'https://themuslimvibe.com/western-muslim-culture/top-10-muslim-inventions-in-history'
+    link: "https://themuslimvibe.com/western-muslim-culture/top-10-muslim-inventions-in-history",
   },
 
   {
     title: "The windmill",
     description: (
-      <span className="text-sm text-white/70">
-        Pīrūz Nahāvandi (600-644).
-      </span>
+      <span className="text-sm text-white/70">Pīrūz Nahāvandi (600-644).</span>
     ),
     header: <SkeletonFive />,
     className: "md:col-span-1",
     icon: <IconWindmill className="h-4 w-4 text-white/90" />,
-    link: 'https://ms.wikipedia.org/wiki/Abu_Lu%27lu%27ah'
+    link: "https://ms.wikipedia.org/wiki/Abu_Lu%27lu%27ah",
   },
 ];

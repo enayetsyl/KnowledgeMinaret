@@ -1,27 +1,9 @@
-import React from 'react'
-import { TypewriterEffect } from './ui/typewriter-effect';
-import { CardStack } from './ui/card-stack';
+import React from "react";
+import { TypewriterEffect } from "./ui/typewriter-effect";
+import { CardStack } from "./ui/card-stack";
+import { homePageBooksWords } from "@/constant";
 
 const Books = () => {
-  const words = [
-    {
-      text: "B",
-      className: "text-white  dark:text-blue-500",
-    },
-    {
-      text: "o",
-    },
-    {
-      text: "o",
-    },
-    {
-      text: "k",
-    },
-    {
-      text: "s",
-    },
-    
-  ];
   const CARDS = [
     {
       id: 0,
@@ -29,7 +11,8 @@ const Books = () => {
       designation: "Dr. Khandaker Abdullah Jahangir",
       content: (
         <p>
-          This is an amazing book that talks details about Islami aqida. It also details all the Sirk are Happening in our Country.
+          This is an amazing book that talks details about Islami aqida. It also
+          details all the Sirk are Happening in our Country.
         </p>
       ),
     },
@@ -39,7 +22,9 @@ const Books = () => {
       designation: "Dr. Khandaker Abdullah Jahangir",
       content: (
         <p>
-          This is an amazing book that talks details about the power of sunnah in our life. It also details all the Bidaha are Happening in our Country.
+          This is an amazing book that talks details about the power of sunnah
+          in our life. It also details all the Bidaha are Happening in our
+          Country.
         </p>
       ),
     },
@@ -49,7 +34,8 @@ const Books = () => {
       designation: "Dr. Khandaker Abdullah Jahangir",
       content: (
         <p>
-          This is an amazing book that talks details about Dayeef hadis. It also details all the Maudu hadis that are circulating in our country.
+          This is an amazing book that talks details about Dayeef hadis. It also
+          details all the Maudu hadis that are circulating in our country.
         </p>
       ),
     },
@@ -59,7 +45,8 @@ const Books = () => {
       designation: "Dr. Khandaker Abdullah Jahangir",
       content: (
         <p>
-          This is an amazing book that talks details about Islami aqida. It also details all the Sirk are Happening in our Country.
+          This is an amazing book that talks details about Islami aqida. It also
+          details all the Sirk are Happening in our Country.
         </p>
       ),
     },
@@ -69,7 +56,9 @@ const Books = () => {
       designation: "Dr. Khandaker Abdullah Jahangir",
       content: (
         <p>
-          This is an amazing book that talks details about the power of sunnah in our life. It also details all the Bidaha are Happening in our Country.
+          This is an amazing book that talks details about the power of sunnah
+          in our life. It also details all the Bidaha are Happening in our
+          Country.
         </p>
       ),
     },
@@ -79,23 +68,23 @@ const Books = () => {
       designation: "Dr. Khandaker Abdullah Jahangir",
       content: (
         <p>
-          This is an amazing book that talks details about Dayeef hadis. It also details all the Maudu hadis that are circulating in our country.
+          This is an amazing book that talks details about Dayeef hadis. It also
+          details all the Maudu hadis that are circulating in our country.
         </p>
       ),
     },
-   
   ];
 
   return (
-    <div className='mt-10'>
-      <div >
-      <TypewriterEffect words={words}/>
+    <div className="mt-10">
+      <div>
+        <TypewriterEffect words={homePageBooksWords} />
       </div>
-      <div className=' h-[40rem] flex items-center justify-center w-full'>
-<CardStack items={CARDS} />
+      <div className=" h-[40rem] flex items-center justify-center w-full">
+        <CardStack items={CARDS} />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Books
+export default Books;

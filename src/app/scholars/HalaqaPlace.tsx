@@ -1,80 +1,30 @@
-import { LayoutGrid } from '@/components/ui/layout-grid';
-import { TypewriterEffect } from '@/components/ui/typewriter-effect';
-import React from 'react'
+import { LayoutGrid } from "@/components/ui/layout-grid";
+import { TypewriterEffect } from "@/components/ui/typewriter-effect";
+import { scholarPageHalaqaPlaceWords } from "@/constant";
+import React from "react";
 
 const HalaqaPlace = () => {
-  const words = [
-    {
-      text: "Our",
-      className: "text-white  dark:text-blue-500",
-    },
-    {
-      text: "scholors",
-    },
-    {
-      text: "take",
-    },
-    {
-      text: "classes",
-    },
-    {
-      text: "in",
-    },
-    {
-      text: "the",
-    },
-    {
-      text: "following",
-    },
-    {
-      text: "places.",
-    },
-    {
-      text: "Click",
-    },
-    {
-      text: "on",
-    },
-    {
-      text: "the",
-    },
-    {
-      text: "image",
-    },
-    {
-      text: "to",
-    },
-    {
-      text: "get",
-    },
-    {
-      text: "detail",
-    },
-    {
-      text: "information.",
-    },
-   
-    
-  ];
   const SkeletonOne = () => {
     return (
       <div>
         <p className="font-bold text-4xl text-white">As Sunnah Trust</p>
         <p className="font-normal text-base text-white"></p>
         <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-          A place established by Late Dr. Abdullah Jahangir. Its a research and eduction center.
+          A place established by Late Dr. Abdullah Jahangir. Its a research and
+          eduction center.
         </p>
       </div>
     );
   };
-   
+
   const SkeletonTwo = () => {
     return (
       <div>
         <p className="font-bold text-4xl text-white">As Sunnah Foundation</p>
         <p className="font-normal text-base text-white"></p>
         <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-          It is established by Ahmadullah. It is mainly charitable organization but do diverse work.
+          It is established by Ahmadullah. It is mainly charitable organization
+          but do diverse work.
         </p>
       </div>
     );
@@ -82,10 +32,13 @@ const HalaqaPlace = () => {
   const SkeletonThree = () => {
     return (
       <div>
-        <p className="font-bold text-4xl text-white">Institute for Community Development</p>
+        <p className="font-bold text-4xl text-white">
+          Institute for Community Development
+        </p>
         <p className="font-normal text-base text-white"></p>
         <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-          Established by Eng. Enamul Haque. It mainly work on arranging regular islamic classes both online and offline. 
+          Established by Eng. Enamul Haque. It mainly work on arranging regular
+          islamic classes both online and offline.
         </p>
       </div>
     );
@@ -96,7 +49,8 @@ const HalaqaPlace = () => {
         <p className="font-bold text-4xl text-white">Al Majhud</p>
         <p className="font-normal text-base text-white"></p>
         <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-          This is a multi purpose charitable organization. It mainly promote education but regularly involve with other charitable activities also. 
+          This is a multi purpose charitable organization. It mainly promote
+          education but regularly involve with other charitable activities also.
         </p>
       </div>
     );
@@ -133,14 +87,14 @@ const HalaqaPlace = () => {
   ];
   return (
     <div>
-      <div className='mx-10 md:mx-20 lg:mx-40 pb-20'>
-      <TypewriterEffect words={words} />
+      <div className="mx-10 md:mx-20 lg:mx-40 pb-20">
+        <TypewriterEffect words={scholarPageHalaqaPlaceWords} />
       </div>
       <div className="h-screen py-20 w-full">
-      <LayoutGrid cards={cards} />
+        <LayoutGrid cards={cards} />
+      </div>
     </div>
-    </div>
-  )
-}
+  );
+};
 
-export default HalaqaPlace
+export default HalaqaPlace;

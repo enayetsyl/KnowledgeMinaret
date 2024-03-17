@@ -4,14 +4,9 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { cn } from "@/utils/cn";
+import { ParallaxScrollProps } from "@/type/type";
 
-export const ParallaxScroll = ({
-  images,
-  className,
-}: {
-  images: string[];
-  className?: string;
-}) => {
+export const ParallaxScroll = ({ images, className }: ParallaxScrollProps) => {
   const gridRef = useRef<any>(null);
   const { scrollYProgress } = useScroll({
     container: gridRef, // remove this if your container is not fixed height

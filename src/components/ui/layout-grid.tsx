@@ -3,19 +3,17 @@ import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/utils/cn";
 import Image from "next/image";
+import { LayoutGridCardProps } from "@/type/type";
 
-type Card = {
-  id: number;
-  content: JSX.Element | React.ReactNode | string;
-  className: string;
-  thumbnail: string;
-};
 
-export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
-  const [selected, setSelected] = useState<Card | null>(null);
-  const [lastSelected, setLastSelected] = useState<Card | null>(null);
 
-  const handleClick = (card: Card) => {
+export const LayoutGrid = ({ cards }: { cards: LayoutGridCardProps[] }) => {
+  const [selected, setSelected] = useState<LayoutGridCardProps | null>(null);
+  const [lastSelected, setLastSelected] = useState<LayoutGridCardProps | null>(
+    null
+  );
+
+  const handleClick = (card: LayoutGridCardProps) => {
     setLastSelected(selected);
     setSelected(card);
   };
@@ -59,7 +57,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
   );
 };
 
-const BlurImage = ({ card }: { card: Card }) => {
+const BlurImage = ({ card }: { card: LayoutGridCardProps }) => {
   const [loaded, setLoaded] = useState(false);
   return (
     <Image
@@ -76,7 +74,11 @@ const BlurImage = ({ card }: { card: Card }) => {
   );
 };
 
-const SelectedCard = ({ selected }: { selected: Card | null }) => {
+const SelectedCard = ({
+  selected,
+}: {
+  selected: LayoutGridCardProps | null;
+}) => {
   return (
     <div className="bg-transparent h-full w-full flex flex-col justify-end rounded-lg shadow-2xl relative z-[60]">
       <motion.div

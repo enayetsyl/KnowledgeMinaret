@@ -3,27 +3,15 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-
-const transition = {
-  type: "spring",
-  mass: 0.5,
-  damping: 11.5,
-  stiffness: 100,
-  restDelta: 0.001,
-  restSpeed: 0.001,
-};
+import { navbarMenuTransition } from "@/constant";
+import { MenuItemProps, MenuProps, ProductItemProps } from "@/type/type";
 
 export const MenuItem = ({
   setActive,
   active,
   item,
   children,
-}: {
-  setActive: (item: string) => void;
-  active: string | null;
-  item: string;
-  children?: React.ReactNode;
-}) => {
+}: MenuItemProps) => {
   return (
     <div onMouseEnter={() => setActive(item)} className="relative ">
       <motion.p
@@ -36,12 +24,12 @@ export const MenuItem = ({
         <motion.div
           initial={{ opacity: 0, scale: 0.85, y: 10 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={transition}
+          transition={navbarMenuTransition}
         >
           {active === item && (
             <div className="absolute top-[calc(100%_+_1.7rem)] left-1/2 transform -translate-x-1/2">
               <motion.div
-                transition={transition}
+                transition={navbarMenuTransition}
                 layoutId="active" // layoutId ensures smooth animation
                 className="bg-white dark:bg-black backdrop-blur-sm rounded-2xl overflow-hidden border border-black/[0.2] dark:border-white/[0.2] shadow-xl"
               >
@@ -60,16 +48,10 @@ export const MenuItem = ({
   );
 };
 
-export const Menu = ({
-  setActive,
-  children,
-}: {
-  setActive: (item: string | null) => void;
-  children: React.ReactNode;
-}) => {
+export const Menu = ({ setActive, children }: MenuProps) => {
   return (
     <nav
-      onMouseLeave={() => setActive(null)} // resets the state
+      onMouseLeave={() => setActive(null)}
       className="relative rounded-xl border border-transparent dark:bg-black dark:border-white/[0.2] bg-gray-800 shadow-input flex justify-center space-x-10 px-8 py-4 "
     >
       {children}
@@ -82,12 +64,7 @@ export const ProductItem = ({
   description,
   href,
   src,
-}: {
-  title: string;
-  description: string;
-  href: string;
-  src: string;
-}) => {
+}: ProductItemProps) => {
   return (
     <Link href={href} className="flex space-x-2">
       <Image

@@ -8,17 +8,9 @@ import {
   useMotionValue,
   useSpring,
 } from "framer-motion";
+import { AnimatedTooltipProps } from "@/type/type";
 
-export const AnimatedTooltip = ({
-  items,
-}: {
-  items: {
-    id: number;
-    name: string;
-    designation: string;
-    image: string;
-  }[];
-}) => {
+export const AnimatedTooltip = ({ items }: AnimatedTooltipProps) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const springConfig = { stiffness: 100, damping: 5 };
   const x = useMotionValue(0); // going to set this value on mouse move

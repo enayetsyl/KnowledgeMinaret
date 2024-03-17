@@ -1,28 +1,14 @@
 "use client";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { CardStackCardProps, CardStackProps } from "@/type/type";
 
 let interval: any;
 
-type Card = {
-  id: number;
-  name: string;
-  designation: string;
-  content: React.ReactNode;
-};
-
-export const CardStack = ({
-  items,
-  offset,
-  scaleFactor,
-}: {
-  items: Card[];
-  offset?: number;
-  scaleFactor?: number;
-}) => {
+export const CardStack = ({ items, offset, scaleFactor }: CardStackProps) => {
   const CARD_OFFSET = offset || 10;
   const SCALE_FACTOR = scaleFactor || 0.06;
-  const [cards, setCards] = useState<Card[]>(items);
+  const [cards, setCards] = useState<CardStackCardProps[]>(items);
 
   useEffect(() => {
     startFlipping();
@@ -31,7 +17,7 @@ export const CardStack = ({
   }, []);
   const startFlipping = () => {
     interval = setInterval(() => {
-      setCards((prevCards: Card[]) => {
+      setCards((prevCards: CardStackCardProps[]) => {
         const newArray = [...prevCards]; // create a copy of the array
         newArray.unshift(newArray.pop()!); // move the last element to the front
         return newArray;
@@ -55,15 +41,19 @@ export const CardStack = ({
               zIndex: cards.length - index, //  decrease z-index for the cards that are behind
             }}
           >
-            <div className="font-normal text-white/80 
+            <div
+              className="font-normal text-white/80 
             line-clamp-3 text-ellipsis overflow-x-hidden sm:line-clamp-none sm:overflow-x-visible
-            dark:text-neutral-200">
+            dark:text-neutral-200"
+            >
               {card.content}
             </div>
             <div>
-              <p className="text-white/80 text-lg font-medium 
+              <p
+                className="text-white/80 text-lg font-medium 
               
-              dark:text-white">
+              dark:text-white"
+              >
                 {card.name}
               </p>
               <p className="text-neutral-400 font-normal dark:text-neutral-200">

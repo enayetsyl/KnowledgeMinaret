@@ -1,14 +1,8 @@
 import { cn } from "@/utils/cn";
 import Link from "next/link";
-import moduleName from '../../../public/download.jpg'
+import { BentoGridItemProps, BentoGridProps } from "@/type/type";
 
-export const BentoGrid = ({
-  className,
-  children,
-}: {
-  className?: string;
-  children?: React.ReactNode;
-}) => {
+export const BentoGrid = ({ className, children }: BentoGridProps) => {
   return (
     <div
       className={cn(
@@ -28,16 +22,7 @@ export const BentoGridItem = ({
   header,
   icon,
   link,
-  // image
-}: {
-  className?: string;
-  title?: string | React.ReactNode;
-  description?: string | React.ReactNode;
-  header?: React.ReactNode;
-  icon?: React.ReactNode;
-  link: string;
-  // image: string
-}) => {
+}: BentoGridItemProps) => {
   return (
     <div
       className={cn(
@@ -49,13 +34,13 @@ export const BentoGridItem = ({
       <div className="group-hover/bento:translate-x-2 transition duration-200">
         {icon}
         <Link href={link} target="_blank">
-        <div className="font-sans font-bold text-white/80 dark:text-neutral-200 mb-2 mt-2">
-          {title}
-        </div>
-        <div className="font-sans font-normal text-white/70 text-xs dark:text-neutral-300">
-          {description}
-        </div>
-      </Link>
+          <div className="font-sans font-bold text-white/80 dark:text-neutral-200 mb-2 mt-2">
+            {title}
+          </div>
+          <div className="font-sans font-normal text-white/70 text-xs dark:text-neutral-300">
+            {description}
+          </div>
+        </Link>
       </div>
     </div>
   );

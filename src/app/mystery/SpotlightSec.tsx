@@ -1,5 +1,5 @@
-import { Spotlight } from '@/components/ui/Spotlight'
-import React from 'react'
+import { Spotlight } from "@/components/ui/Spotlight";
+import React from "react";
 
 const SpotlightSec = () => {
   return (
@@ -13,11 +13,14 @@ const SpotlightSec = () => {
           Exercise Caution <br /> Many perplexing puzzles ahead.
         </h1>
         <p className="mt-4 font-normal text-base text-neutral-300 max-w-lg text-center mx-auto">
-        Proceed with caution, as there are many mysteries ahead. Within the following contents lie numerous hidden secrets. Without careful attention and thorough investigation, you may overlook valuable insights. Navigate with care.
+          Proceed with caution, as there are many mysteries ahead. Within the
+          following contents lie numerous hidden secrets. Without careful
+          attention and thorough investigation, you may overlook valuable
+          insights. Navigate with care.
         </p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default SpotlightSec
+export default SpotlightSec;

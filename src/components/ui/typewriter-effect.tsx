@@ -1,5 +1,9 @@
 "use client";
 
+import {
+  TypewriterEffectProps,
+  TypewriterEffectSmoothProps,
+} from "@/type/type";
 import { cn } from "@/utils/cn";
 import { motion, stagger, useAnimate, useInView } from "framer-motion";
 import { useEffect } from "react";
@@ -8,14 +12,7 @@ export const TypewriterEffect = ({
   words,
   className,
   cursorClassName,
-}: {
-  words: {
-    text: string;
-    className?: string;
-  }[];
-  className?: string;
-  cursorClassName?: string;
-}) => {
+}: TypewriterEffectProps) => {
   // split text inside of words into array of characters
   const wordsArray = words.map((word) => {
     return {
@@ -101,14 +98,7 @@ export const TypewriterEffectSmooth = ({
   words,
   className,
   cursorClassName,
-}: {
-  words: {
-    text: string;
-    className?: string;
-  }[];
-  className?: string;
-  cursorClassName?: string;
-}) => {
+}: TypewriterEffectSmoothProps) => {
   // split text inside of words into array of characters
   const wordsArray = words.map((word) => {
     return {

@@ -2,6 +2,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/utils/cn";
+import { MaskContainerProps } from "@/type/type";
 
 export const MaskContainer = ({
   children,
@@ -9,16 +10,13 @@ export const MaskContainer = ({
   size = 10,
   revealSize = 600,
   className,
-}: {
-  children?: string | React.ReactNode;
-  revealText?: string | React.ReactNode;
-  size?: number;
-  revealSize?: number;
-  className?: string;
-}) => {
+}: MaskContainerProps) => {
   const [isHovered, setIsHovered] = useState(false);
+
   const [mousePosition, setMousePosition] = useState<any>({ x: null, y: null });
+
   const containerRef = useRef<any>(null);
+
   const updateMousePosition = (e: any) => {
     const rect = containerRef.current.getBoundingClientRect();
     setMousePosition({ x: e.clientX - rect.left, y: e.clientY - rect.top });
@@ -35,6 +33,7 @@ export const MaskContainer = ({
       }
     };
   }, []);
+  
   let maskSize = isHovered ? revealSize : size;
 
   return (

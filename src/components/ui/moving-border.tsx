@@ -9,6 +9,7 @@ import {
 } from "framer-motion";
 import { useRef } from "react";
 import { cn } from "@/utils/cn";
+import { ButtonMovingBorderProps, ButtonProps } from "@/type/type";
 
 export function Button({
   borderRadius = "1rem",
@@ -19,16 +20,7 @@ export function Button({
   duration,
   className,
   ...otherProps
-}: {
-  borderRadius?: string;
-  children: React.ReactNode;
-  as?: any;
-  containerClassName?: string;
-  borderClassName?: string;
-  duration?: number;
-  className?: string;
-  [key: string]: any;
-}) {
+}: ButtonProps) {
   return (
     <Component
       className={cn(
@@ -75,13 +67,7 @@ export const MovingBorder = ({
   rx,
   ry,
   ...otherProps
-}: {
-  children: React.ReactNode;
-  duration?: number;
-  rx?: string;
-  ry?: string;
-  [key: string]: any;
-}) => {
+}: ButtonMovingBorderProps) => {
   const pathRef = useRef<any>();
   const progress = useMotionValue<number>(0);
 

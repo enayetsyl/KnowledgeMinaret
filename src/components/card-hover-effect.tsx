@@ -1,21 +1,11 @@
-'use client'
+"use client";
+import { CardDescriptionProps, CardProps, CardTitleProps, HoverEffectProps } from "@/type/type";
 import { cn } from "@/utils/cn";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
-import { URL } from 'url'
 
-export const HoverEffect = ({
-  items,
-  className,
-}: {
-  items: {
-    title: string;
-    description: string;
-    link?: string;
-  }[];
-  className?: string;
-}) => {
+export const HoverEffect = ({ items, className }: HoverEffectProps) => {
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
@@ -95,10 +85,7 @@ export const HoverEffect = ({
 export const Card = ({
   className,
   children,
-}: {
-  className?: string;
-  children: React.ReactNode;
-}) => {
+}: CardProps) => {
   return (
     <div
       className={cn(
@@ -115,10 +102,7 @@ export const Card = ({
 export const CardTitle = ({
   className,
   children,
-}: {
-  className?: string;
-  children: React.ReactNode;
-}) => {
+}: CardTitleProps ) => {
   return (
     <h4 className={cn("text-zinc-100 font-bold tracking-wide mt-4", className)}>
       {children}
@@ -128,10 +112,7 @@ export const CardTitle = ({
 export const CardDescription = ({
   className,
   children,
-}: {
-  className?: string;
-  children: React.ReactNode;
-}) => {
+}: CardDescriptionProps) => {
   return (
     <p
       className={cn(
