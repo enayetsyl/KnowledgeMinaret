@@ -6,6 +6,7 @@ import GoodDeedList from './GoodDeedList'
 import Parents from './Parents'
 import HiddenSadaqah from './HiddenSadaqah'
 import OneUmmah from './OneUmmah'
+import EndMessage from '../scholars/EndMessage'
 
 const MistryPage = () => {
   return (
@@ -16,8 +17,8 @@ const MistryPage = () => {
       <GoodDeedList/>
       <Parents/>
       <HiddenSadaqah/>
-      {/* <OneUmmah/> */}
-
+      <OneUmmah/>
+      <EndMessage href='/' />
         
     </div>
   )

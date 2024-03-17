@@ -23,7 +23,7 @@ const GoodDeedList = () => {
       <div>
         <TypewriterEffect words={words}/>
       </div>
-      <div className=" w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:mt-20 mt-40    ">
+      <div className=" w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:mt-20 mt-40 mx-auto pl-12 md:pl-8 lg:pl-0  ">
     <GoodDeedCard
     title="Saying Salam"
     paragraph="He who says Assalaamu Alaikum  ten rewards are written down for him, and he who says Assalaamu Alaikum wa rahmatullah  for him twenty rewards are written down and he who says Assalaamu Alaikum wa rahmatullahi wa barakatuh thirty rewards are written down (for him)."

@@ -14,8 +14,8 @@ const HiddenSadaqah = () => {
       <h2 className="dark:text-white text-white mt-4 text-sm font-light">
       What you feed yourself is Charity. What you feed your child, your wife and your servant is Charity.
       </h2>
-      <p className="text-sm border font-light dark:border-white/[0.2] border-black/[0.2] rounded-full mt-4 text-White dark:text-white px-2 py-0.5">
-        Secret Charity
+      <p className="text-base font-bold border dark:border-white/[0.2] border-black/[0.2] rounded-full mt-4 text-White dark:text-white px-2 py-0.5">
+      Secret Charity
       </p>
     </div>
   )
