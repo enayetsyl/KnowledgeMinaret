@@ -1,4 +1,3 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
@@ -103,10 +102,24 @@ Framer Motion is extensively utilized throughout the design to create fluid and 
 
 While Aceternity UI provides a solid foundation, customizations have been made to ensure that the design aligns closely with the project's goals and branding. These customizations range from color schemes and typography choices to layout adjustments and component styling, resulting in a cohesive and visually appealing design that reflects the unique identity of the "Knowledge Minaret" web application.
 
+## 🏆 **Author:** Md Enayetur Rahman
+
+### Contact Information
+- [LinkedIn](https://www.linkedin.com/in/md-enayetur-rahman/)
+- [Facebook](https://www.facebook.com/profile.php?id=100094416483981)
+- [X (Twitter)](https://x.com/enayetu_syl)
+- [YouTube](https://www.youtube.com/@MdEnayeturRahman)
+- [GitHub](https://github.com/enayetsyl/)
+- [Medium](https://medium.com/@enayetflweb)
+- [dev.to](https://dev.to/md_enayeturrahman_2560e3)
+- [Leetcode](https://leetcode.com/u/XTl7hvNPIc/)
+- [Hackerrank](https://www.hackerrank.com/profile/enayetflweb)
+- [Codeforces](https://codeforces.com/profile/enayetsyl)
+- [Email](mailto:enayetflweb@gmail.com)
+
 ### Conclusion
 
 Through the strategic integration of Aceternity UI components, React Three Fiber for 3D animation, and Framer Motion for enhanced design, the "Knowledge Minaret" web application achieves a design that is both visually striking and functionally robust. By combining the best of these technologies and customizing them to suit project needs, the design sets the stage for an engaging and immersive user experience, inviting users to explore and discover the wealth of knowledge offered by the platform.
 
-Project Documentation - https://md-enayetur-rahman.gitbook.io/knowledge-minaret-documentation/
-Live Link - https://knowledge-minaret.vercel.app/
-Linkedin Link - https://www.linkedin.com/in/md-enayetur-rahman/
+[Project Documentation](https://md-enayetur-rahman.gitbook.io/knowledge-minaret-documentation/)
+[Live Link](https://knowledge-minaret.vercel.app/)
